@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { AlbumType } from '../../types';
 
 function ObjectResult({ searchResult }: { searchResult: AlbumType[] }) {
@@ -7,12 +8,14 @@ function ObjectResult({ searchResult }: { searchResult: AlbumType[] }) {
         <div key={ album.collectionId }>
           <img src={ album.artworkUrl100 } alt={ album.collectionName } />
           <p>{album.collectionName}</p>
-          <a
+
+          <Link
+            to={ `/album/${album
+              .collectionId}` }
             data-testid={ `link-to-album-${album.collectionId}` }
-            href={ `/album/${album.collectionId}` }
           >
-            Ver detalhes
-          </a>
+            Ver Detalhes
+          </Link>
         </div>
       ))}
     </div>
