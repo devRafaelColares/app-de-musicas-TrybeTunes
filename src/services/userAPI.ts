@@ -11,7 +11,6 @@ const saveUser = (user: UserType) => localStorage.setItem(USER_KEY, JSON.stringi
 // A função simulateRequest simula uma requisição para uma API externa
 // Esse tipo de função que "chama outra função" é chamada de
 // "currying function" https://javascript.info/currying-partials
-// não se preocupe, estudaremos isso mais futuramente
 // --------------------------------------------------------------------
 
 const simulateRequest = (response: any) => (callback: (param: any) => void) => {
